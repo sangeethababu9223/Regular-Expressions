@@ -9,7 +9,7 @@ HINT: You can use the keyup event to respond to entered text. There is a CSS Cla
 function myFunction(){
     let PhoneField = document.getElementById('phone');
     let phnumber = PhoneField.value;
-    let phnReg = /\(?\d{3}\)?[-.]?\d{3}[-.]?\d{3}/;
+    let phnReg = /\(?\d{3}\)?[-.]?\d{3}[-.]?\d{4}/;
     if(phnReg.test(phnumber)){
         PhoneField.classList.add('green');
         PhoneField.classList.remove('red');
