@@ -1,8 +1,8 @@
-let txt = "Jumping in Hello world, Howdy!";
+let txt = "Jumping in miercolas nicholaS pikachus Hello world, Howdy!";
 let regex1 = /Hello/;
 let regex2 = /world/;
-let regex3 = /\s/;
+let regex3 = /s\s/gi;
 
-// console.log(regex1.exec(txt));
-// console.log(regex2.exec(txt));
-console.log(txt.split(regex3));
+console.log(regex3.exec(txt));
+console.log(regex3.exec(txt));
+console.log(txt.match(regex3));
