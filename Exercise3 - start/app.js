@@ -7,7 +7,7 @@ HINT: You can use the keyup event to respond to entered text. There is a CSS Cla
 */
 (function(){
     let phoneField = document.getElementById('phone');
-    let phnReg = /\(?\d{3}\)?[-.]?\d{3}[-.]?\d{4}/;
+    let phnReg = /^\(?\d{3}\)?[-.]?\d{3}[-.]?\d{4}$/;
     phoneField.addEventListener('keyup', checkReg)
     function checkReg(){
         let phnumberVal = phoneField.value;
