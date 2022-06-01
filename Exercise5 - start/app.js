@@ -6,9 +6,15 @@ let data = ["Jensen, Dale", "Smith, Andrea", "Jorgensen, Michael", "Vasefi, Anni
 let revdata = [];
 let regExp = /(\w+), (\w+)/;
 let res;
-data.forEach(function(item,index){
-    res = regExp.exec(item);
-    let revItem = res[2]+", "+res[1];
+let revItem;
+// data.forEach(function(item,index){
+//     res = regExp.exec(item);
+//     let revItem = res[2]+", "+res[1];
+//     revdata.push(revItem);
+// });
+data.map(val => {
+    res = regExp.exec(val);
+    revItem = res[2]+", "+res[1];
     revdata.push(revItem);
-});
-console.log(revdata)
+})
+console.log(revdata);
