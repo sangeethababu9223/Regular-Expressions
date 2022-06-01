@@ -28,4 +28,4 @@ console.log(phoneNums);
 console.log("Filtered Array");
 console.log(numberArray);
 
-let passReg = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).*$/g;
+let passReg = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?!.*[0-9]).*$/g;
