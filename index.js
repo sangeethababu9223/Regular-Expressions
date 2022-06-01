@@ -29,3 +29,5 @@ console.log("Filtered Array");
 console.log(numberArray);
 
 let passReg = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?!.*[0-9]).*$/g;
+let moneyReg = /(?<=\$|€)\d+/g;
+let moneyNegReg = /\b(?<!\$|€)\d+\b/g;
