@@ -3,7 +3,7 @@ Iterate through the data provided. Use a regular expression to store the names i
 */
 
 let data = ["Jensen, Dale", "Smith, Andrea", "Jorgensen, Michael", "Vasefi, Annika", "Lopez, Monica", "Crockett, Steven"];
-let regExp = /(\w+), (\w+)/;
+let regExp = /(?<last>\w+), (?<first>\w+)/;
 let res;
 // data.forEach(function(item,index){
 //     res = regExp.exec(item);
@@ -13,7 +13,7 @@ let res;
 let revdata = data.map(val => {
     res = regExp.exec(val);
     if(res!==null){
-       return res[2]+" "+res[1];
+       return res.groups.first+" "+res.groups.last;
     }else {
         return null;
     }
