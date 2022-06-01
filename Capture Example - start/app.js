@@ -1,6 +1,6 @@
 let data = "2018-3-9";
 
-let reg = /^(\d\d\d\d)[-./](\d{1,2})[-./](\d{1,2})$/,
+let reg = /^(?:\d{4})(?<delimiter>[-./])(\d{1,2})\k<delimiter>(\d{1,2})$/,
     arr = reg.exec(data),
     year,
     month,
