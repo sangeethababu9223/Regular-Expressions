@@ -14,7 +14,9 @@ let revItem;
 // });
 data.map(val => {
     res = regExp.exec(val);
-    revItem = res[2]+", "+res[1];
-    revdata.push(revItem);
+    if(res!==null){
+        revItem = res[2]+", "+res[1];
+        revdata.push(revItem);
+    }
 })
 console.log(revdata);
